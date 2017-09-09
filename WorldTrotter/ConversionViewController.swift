@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversionViewController: UIViewController {
+class ConversionViewController: UIViewController, UITextFieldDelegate {
     //Creates an outlet to a UILabel called celsiusLabel which needs to have a connection between the View Controller and the label itslf (remember right-click-drag or option-dragging?)
     @IBOutlet var celsiusLabel: UILabel!
     
@@ -72,4 +72,22 @@ class ConversionViewController: UIViewController {
         nf.maximumFractionDigits = 1
         return nf
     }()
+    //* alsdfkjsadfj */
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        /* Why the hell can't I print(textField.text) without warnings??? */
+        //print(textField.text)
+        
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        
+        if existingTextHasDecimalSeparator != nil,
+            replacementTextHasDecimalSeparator != nil {
+            return false
+        } else {
+            return true
+        }
+    }
 }
