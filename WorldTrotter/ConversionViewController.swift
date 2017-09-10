@@ -74,13 +74,23 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    /* viewWillAppear will execute just before, and each time the view is called to load.  Executes after viewDidLoad */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //.text = "212"
+        print("Conversion View has focus")
+        //self.view.backgroundColor = UIColor.darkGray
+    }
+    /* viewDidLoad executes only once when the view is loaded initially */
     override func viewDidLoad() {
+        print("ConversionViewController did load.")
         print("Starting override func viewDidLoad")
         super.viewDidLoad()
         print("  Calling updateCelsiusLabel()")
         updateCelsiusLabel()
         print("exiting viewDidLoad")
     }
+    
     
     //Instantiate a "Number formatter" via a Closure
     let numberFormatter: NumberFormatter = {

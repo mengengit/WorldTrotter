@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Converter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Converter" id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -80,7 +80,7 @@
                             <outletCollection property="gestureRecognizers" destination="pTJ-kl-gix" appends="YES" id="mjx-h5-Fgz"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="293-BX-8D7"/>
+                    <tabBarItem key="tabBarItem" title="Convert" image="ConvertIcon" id="293-BX-8D7"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="wUx-HR-vau" id="B53-Pg-R4c"/>
                         <outlet property="textField" destination="lNR-j0-ewm" id="V8Z-BY-HIY"/>
@@ -93,34 +93,34 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="174" y="59"/>
+            <point key="canvasLocation" x="-96" y="59"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="ZN8-47-KG5">
             <objects>
-                <viewController id="9a5-8c-PiM" sceneMemberID="viewController">
+                <viewController title="Map" id="9a5-8c-PiM" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="NYy-8M-7aZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Item" id="P1g-zq-dHH"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="P1g-zq-dHH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eE6-kZ-uDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1886.25" y="59.154929577464792"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar-->
         <scene sceneID="8jv-Ft-64b">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Cy4-Cv-BbT" sceneMemberID="viewController">
+                <tabBarController title="Tab Bar" automaticallyAdjustsScrollViewInsets="NO" id="Cy4-Cv-BbT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Ujm-Vb-fIO">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9a5-8c-PiM" kind="relationship" relationship="viewControllers" id="smq-nW-xQN"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ouT-iq-rVj"/>
+                        <segue destination="9a5-8c-PiM" kind="relationship" relationship="viewControllers" id="smq-nW-xQN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Xj-zU-s3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,4 +128,8 @@
             <point key="canvasLocation" x="888.75" y="59.154929577464792"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ConvertIcon" width="48" height="32"/>
+        <image name="MapIcon" width="48" height="32"/>
+    </resources>
 </document>
