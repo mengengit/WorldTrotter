@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB7123881F65930B000B542C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7123871F65930B000B542C /* MapKit.framework */; };
 		BBE391631F61963400CE5149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE391621F61963400CE5149 /* AppDelegate.swift */; };
 		BBE391681F61963400CE5149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE391661F61963400CE5149 /* Main.storyboard */; };
 		BBE3916A1F61963400CE5149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE391691F61963400CE5149 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB7123871F65930B000B542C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BBE3915F1F61963400CE5149 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE391621F61963400CE5149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE391671F61963400CE5149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7123881F65930B000B542C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB7123861F65930B000B542C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB7123871F65930B000B542C /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BBE391561F61963400CE5149 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +92,7 @@
 				BBE391761F61963400CE5149 /* WorldTrotterTests */,
 				BBE391811F61963400CE5149 /* WorldTrotterUITests */,
 				BBE391601F61963400CE5149 /* Products */,
+				BB7123861F65930B000B542C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
