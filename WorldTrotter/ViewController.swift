@@ -17,9 +17,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //let url = NSURL(string: "http://www.google.com")
-        //let request = NSURLRequest(URL: url!)
         let electronicArmoryURL = URL(string: "http://www.topprice4yourhome.com/message2-working.php")
         let electronicArmoryURLRequest = URLRequest(url: electronicArmoryURL!)
         webView.loadRequest(electronicArmoryURLRequest)
@@ -31,5 +28,5 @@ class ViewController: UIViewController {
         
     }
     
-    
+
 }
