@@ -28,7 +28,6 @@ class MapViewController: UIViewController {
         //Page 108 explains what the next line does in the iOS Programming book
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         
-        //segmentedControl.addTarget(self, action: #selector(MapViewController.mapTypeChanged(_:)), for: .valueChanged)
         segmentedControl.addTarget(self,
                                    action: #selector(MapViewController.mapTypeChanged(_:)),
                                    for: .valueChanged)
@@ -38,22 +37,20 @@ class MapViewController: UIViewController {
         
         //Let's create some layout contraint instances...
         //Align the Standard, Hybrid and Satellite buttons with the top of the parent view
-        let topConstraint = segmentedControl.topAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -50)
-        let bottomConstraint = segmentedControl.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -8)
-        bottomConstraint.isActive = true
+        //segmentedControl.topAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -50).isActive = true
+        //segmentedControl.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -8).isActive = true
+        
         //Align the Standard, Hybrid and Satellite buttons with the left edge of the parent view
-        let leadingConstraint = segmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8)
+        //segmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
         //Align the Standard, Hybrid and Satellite buttons with the right edge of the parent view
-        let trailingConstraint = segmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8)
+        //segmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
         
         //Now we activate the constraint instances defined above using the isActive property
         //See page 110 in iOS Programming for further info on the below commands and what they affect in the view hierarchy
-        leadingConstraint.isActive = true
-        trailingConstraint.isActive = true
         
         //let topConstraint = segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
-        topConstraint.isActive = true
-
+        
         
     }
     
