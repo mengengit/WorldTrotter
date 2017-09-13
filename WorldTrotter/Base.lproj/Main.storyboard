@@ -131,7 +131,7 @@
                             <constraint firstAttribute="trailing" secondItem="gRf-8P-kIF" secondAttribute="trailing" id="tGx-Rx-Ihh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Web" id="iTG-tK-EBH"/>
+                    <tabBarItem key="tabBarItem" title="Web" image="ImageIcon" id="iTG-tK-EBH"/>
                     <connections>
                         <outlet property="webView" destination="gRf-8P-kIF" id="8on-Lb-EOQ"/>
                     </connections>
@@ -163,6 +163,7 @@
     </scenes>
     <resources>
         <image name="ConvertIcon" width="48" height="32"/>
+        <image name="ImageIcon" width="22" height="22"/>
         <image name="MapIcon" width="48" height="32"/>
     </resources>
 </document>
