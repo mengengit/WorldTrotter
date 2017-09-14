@@ -26,4 +26,10 @@ class ViewController: UIViewController/*, WKNavigationDelegate*/ {
         
     }
     
+    override func viewDidLoad() {
+        print("Starting ViewController override func viewDidLoad")
+        super.viewDidLoad()
+        print("Exiting ViewController override func viewDidLoad")
+    }
+    
 }
