@@ -1,45 +1,29 @@
-//
-//  ViewController.swift
-//  WorldTrotter
-//
-//  Created by Mark Engen on 9/11/17.
-//  Copyright © 2017 Mark Engen. All rights reserved.
-//
+// This compiles and runs with no warning
+
+//https://www.hackingwithswift.com/read/4/2/creating-a-simple-browser-with-wkwebview
 
 import UIKit
+
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController/*, WKNavigationDelegate*/ {
     
-    @IBOutlet var webView: UIWebView!
-    
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let electronicArmoryURL = URL(string: "http://www.topprice4yourhome.com/message2-working.php")
-        let electronicArmoryURLRequest = URLRequest(url: electronicArmoryURL!)
-        webView.loadRequest(electronicArmoryURLRequest)
-        print("Got here")
+    override func loadView() {
         
-        /* changing text colors in tab bar courtesy of https://stackoverflow.com/questions/31117069/changing-tab-bar-item-image-and-text-color-ios */
+        var webView: WKWebView!
         
-        let selectedColor   = UIColor(red: 180.0/255.0, green: 180.0/255.0, blue: 180.0/255.0, alpha: 3.0)
-        let unselectedColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 3.0)
+        webView = WKWebView()
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: selectedColor], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: unselectedColor], for: .selected)
-
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("Map View has focus")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        /*webView.navigationDelegate = self*/
+        
+        view = webView
+        
+        let siteAddress = URL(string: "https://www.gmail.com")
+        
+        let siteRequest = URLRequest(url: siteAddress!)
+        
+        webView.load(siteRequest)
         
     }
     
-
 }
