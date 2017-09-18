@@ -9,7 +9,7 @@
 "9a5-8c-PiM.title" = "Mapa";
 
 /* Class = "UIViewController"; title = "Converter"; ObjectID = "BYZ-38-t0r"; */
-"BYZ-38-t0r.title" = "Converter";
+"BYZ-38-t0r.title" = "Convertidor";
 
 /* Class = "UITabBarController"; title = "Tab Bar"; ObjectID = "Cy4-Cv-BbT"; */
 "Cy4-Cv-BbT.title" = "Tab Bar";
@@ -21,7 +21,7 @@
 "NSG-ye-z9W.text" = "grados Fahrenheit";
 
 /* Class = "UITabBarItem"; title = "Map"; ObjectID = "P1g-zq-dHH"; */
-"P1g-zq-dHH.title" = "Map";
+"P1g-zq-dHH.title" = "Mapa";
 
 /* Class = "UITabBarItem"; title = "Web"; ObjectID = "iTG-tK-EBH"; */
 "iTG-tK-EBH.title" = "Web";
